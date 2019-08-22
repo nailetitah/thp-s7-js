@@ -19,17 +19,16 @@ var mostRented
 var lessRented 
 var title873495
 var book133712
-var orderedBooks = []
 
 for (let bookAttribut in books) {
   let bookRented = books[bookAttribut].rented
   let bookTitle = books[bookAttribut].title
   let bookId = books[bookAttribut].id
   
-  // 1
+  // Livres ont été au moins empruntés une fois
   result *= bookRented
 
-  // 2 
+  // livre le plus emprunté 
   arr.push(bookRented)
   let l = arr.length - 1
   let most = arr.sort()[l]
@@ -37,26 +36,21 @@ for (let bookAttribut in books) {
     mostRented = bookTitle
   }
 
-
-  // 3
+  // livre le moins emprunté 
   let less = arr.sort()[0]
   if(bookRented === less) {
     lessRented = bookTitle
   }
 
-  // 4 
+  // Livre avec l'id 873495
   if(bookId === 873495) {
     title873495 = bookTitle 
   }
 
-  // 5 
+  // Supprimer livre avec l'id 133712
   if(bookId === 133712) {
     book133712 = books.indexOf(books[bookAttribut]) 
   }
-
-  // 6
-  orderedBooks.push(books[bookAttribut])
-  
   
 }
 
@@ -88,4 +82,10 @@ console.log(books)
 
 // 6 
 console.log("6. Livres triés par ordre alphabétique")
-console.log(orderedBooks)
+var byTitle = books.slice(0) 
+byTitle.sort(function(a,b) {
+  var x = a.title.toLowerCase();
+  var y = b.title.toLowerCase();
+  return x < y ? -1 : x > y ? 1 : 0;
+});
+console.log(byTitle)

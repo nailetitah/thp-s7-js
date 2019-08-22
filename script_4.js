@@ -18,26 +18,50 @@ const entrepreneurs = [
   { first: 'Marc', last: 'Andreessen', year: 1971 },
   { first: 'Peter', last: 'Thiel', year: 1967 }
 ];
-var arr = []
+
+var seventiesEntrepreneurs = ""
+var arrFirstAndLast = []
+var ageEntrepreneurs = ""
+var yearToday = new Date().getFullYear()
+var byName = entrepreneurs.slice(0)
+
 for (let entrepreneurAttribut in entrepreneurs) {
   let entrepreneurYear = entrepreneurs[entrepreneurAttribut].year
   let entrepreneurFirst = entrepreneurs[entrepreneurAttribut].first
   let entrepreneurLast = entrepreneurs[entrepreneurAttribut].last
-  /* 
-  // Nés dans les années 1970
+  let entrepreneurAge = yearToday - entrepreneurYear
+
+  // Entrepreneur nés dans les années 70
   if(entrepreneurYear >= 1970 && entrepreneurYear < 1980 )  {
-    console.log(entrepreneurFirst + " " + entrepreneurLast);
-  } */
+    seventiesEntrepreneurs += entrepreneurFirst + " " + entrepreneurLast + " (" + entrepreneurYear + ") \n"
+  } 
 
   // Array avec prénoms et noms
-  arr.push(entrepreneurFirst + " " + entrepreneurLast)
+  arrFirstAndLast.push(entrepreneurFirst + " " + entrepreneurLast)
   
 
   // Âge aujourd'hui
-  
-
-  // Par odre alphabétique de nom de famille
-
+  ageEntrepreneurs += entrepreneurFirst + " " + entrepreneurLast + " aurait cette année " + entrepreneurAge  + " ans" + "\n"
 
 }
- // console.log(arr)
+
+// 1 
+console.log("1. Entrepreneurs nés dans les années 70")
+console.log(seventiesEntrepreneurs)
+
+// 2
+console.log("2. Array avec prénom et nom des entrepreneurs")
+console.log(arrFirstAndLast)
+
+// 3 
+console.log("3. Âge de chaque inventeur aujourd'hui")
+console.log(ageEntrepreneurs)
+
+// 4 
+console.log("4. Entrepreneurs triés par ordre alphabétique du nom de famille")
+byName.sort(function(a,b) {
+    var x = a.last.toLowerCase();
+    var y = b.last.toLowerCase();
+    return x < y ? -1 : x > y ? 1 : 0;
+});
+console.log(byName)
