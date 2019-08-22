@@ -18,3 +18,26 @@ const entrepreneurs = [
   { first: 'Marc', last: 'Andreessen', year: 1971 },
   { first: 'Peter', last: 'Thiel', year: 1967 }
 ];
+var arr = []
+for (let entrepreneurAttribut in entrepreneurs) {
+  let entrepreneurYear = entrepreneurs[entrepreneurAttribut].year
+  let entrepreneurFirst = entrepreneurs[entrepreneurAttribut].first
+  let entrepreneurLast = entrepreneurs[entrepreneurAttribut].last
+  /* 
+  // Nés dans les années 1970
+  if(entrepreneurYear >= 1970 && entrepreneurYear < 1980 )  {
+    console.log(entrepreneurFirst + " " + entrepreneurLast);
+  } */
+
+  // Array avec prénoms et noms
+  arr.push(entrepreneurFirst + " " + entrepreneurLast)
+  
+
+  // Âge aujourd'hui
+  
+
+  // Par odre alphabétique de nom de famille
+
+
+}
+ // console.log(arr)
