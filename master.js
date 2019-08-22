@@ -211,6 +211,8 @@ function perform(script) {
 		case "5":
 		script5();
 		break;
+		default:
+    	console.log("Fais ton choix entre 1 et 5.");
 	}
 }
 var userChoice = prompt("Quel script souhaites-tu lancer ?");
