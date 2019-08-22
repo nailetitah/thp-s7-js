@@ -213,8 +213,10 @@ function perform(script) {
 		break;
 	}
 }
-
-var userChoice = prompt("Quel script souhaites-tu lancer ? (Rafraîchis la page pour un nouveau choix)");
+var userChoice = prompt("Quel script souhaites-tu lancer ?");
 perform(userChoice)
+console.log("--------------------------------------------------")
+console.log("Rafraîchis la page pour lancer un nouveau script !")
+console.log("--------------------------------------------------")
 
 	
