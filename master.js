@@ -8,7 +8,7 @@ function script1() {
 
 // Script 2 
 function script2() {
-	let userNumber = prompt("De quel nombre veut tu calculer la factorielle ?");
+	let userNumber = prompt("De quel nombre veux-tu calculer la factorielle ?");
 	let result = 1;
 	for (var i = 1; i <= userNumber; i++) {
 		result *= i;
