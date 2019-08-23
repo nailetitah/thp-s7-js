@@ -257,6 +257,8 @@ function script6() {
 
 // PERFORM 
 function perform(script) {
+	console.log("Voici le résultat du script " + script)
+	console.log("-----------------------------")
 	switch (script) {
 		case "1":
 		script1();
